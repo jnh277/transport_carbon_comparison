@@ -35,12 +35,27 @@
     3.16 kilograms CO2 per 1 kilogram of fuel consumed
     0.804kg/L density
 
+
+    This worked out at roughly 50kg per seat.
+
+    Interestingly there is this website that does a supposedly similar calculation
+    https://co2.myclimate.org/en/portfolios?calculation_id=5086910
+    and for this route it gives
+    CO2 amount: 0.175 t
+
+    which is a factor of 3 higher.
+
+    So maybe I need to look into take off and landing amount?
+
+    It goes into how it does the calculation here
+    https://www.myclimate.org/fileadmin/user_upload/myclimate_-_home/01_Information/01_About_myclimate/09_Calculation_principles/Documents/myclimate-flight-calculator-documentation_EN.pdf
 """
 
-distance = 718
+distance = 718              # km
+# distance = 3290              # km (Perth, jsut for comparison but probably should use different values for fuel economy)
 jetfuel_density = 0.804     # kg/L
 emission_factor = 3.16      # kg CO2 / kg fuel
-carbon_cost = 48/1000       # $/kg
+carbon_cost = 48/1000       # $/kg (based on high prices reached this year)
 
 fuel_economy_per_seat = {"Boeing 737-800": 2.77,
                          "Airbus A320": 2.61,
